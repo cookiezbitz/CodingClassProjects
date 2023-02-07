@@ -1,10 +1,12 @@
 PImage ship;
+PImage bullet;
 Player p;
 
 void setup() {
   size(1200, 800);
   ship = loadImage("test3.png");
   ship.resize(100, 0);
+  bullet = loadImage("naner2.png");
   imageMode(CENTER);
   p = new Player();
 }
@@ -13,6 +15,7 @@ void draw() {
   background(0);
   p.display();
   p.update();
+  image(bullet,mouseX,mouseY);
 }
 
 class Player {
