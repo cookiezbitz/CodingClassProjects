@@ -68,7 +68,11 @@ void draw(){
      float d = dist(c.x,c.y,other.x,other.y);
      if(d-2<c.r  + other.r){
       c.growing = false;
+      if ( c.growing == false && c.r > 3){
+        c.r  = 1;
+      }
       break;
+     
      }
    }
    }
