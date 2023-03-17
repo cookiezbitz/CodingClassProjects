@@ -3,12 +3,13 @@ Hedgehog h;
 void setup(){
   
   g = new Grid(4,4);
+
   g.display();
   h = new Hedgehog(2,2);
 }
 
 void draw(){
-  
+    g.updatePosition(h);
   
 }
 
