@@ -9,7 +9,7 @@ public class Arrays_Lab
         int totalofnum = 0;
 
         //1.) write a loop to print out every third number in the array (i.e. first, third, sixth, etc)
-
+        System.out.println("Every third number");
         for(int i = 0; i < rayOne.length; i++){
             if(i%3 == 0){
                 System.out.println(rayOne[i]);
@@ -18,6 +18,8 @@ public class Arrays_Lab
         }
 
         //2.) write a loop to print out all of the numbers backwards
+        
+        System.out.println("every number backwards");
         System.out.println(" ");
         for(int i = rayOne.length-1; i >= 0; i--){
 
@@ -29,11 +31,12 @@ public class Arrays_Lab
 
         //3.) write a loop to calculate the average of all the values in the array and print the result
         
+        System.out.println("average of all values");
         for(int i = 0; i <= rayOne.length -1; i++){
             totalofnum = totalofnum + rayOne[i];
             
         }
-        System.out.println("TEST");
+        //System.out.println("TEST");
         System.out.println(totalofnum/rayOne.length);
         
     }

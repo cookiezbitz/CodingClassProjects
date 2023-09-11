@@ -37,7 +37,7 @@ public class String_Lab
         }
          */
         //3.) check to see if the word contains at least one vowel (a/e/i/o/u) and print out the result
-        System.out.println("TEST");
+        //System.out.println("TEST");
         if(word.contains("a")){
             System.out.print("a");
         }
