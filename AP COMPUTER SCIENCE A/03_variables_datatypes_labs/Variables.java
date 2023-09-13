@@ -30,7 +30,7 @@ public class Variables
         System.out.println("/////////////////////////////////");
         System.out.println("*                               *");
         System.out.println("*        integer types          *");
-        System.out.println("*                               *");
+        System.out.println("*                                                   *");
         System.out.println("*8 bit - byteOne = "+byteOne+"\t\t*");
         System.out.println("*16 bit - shorty = "+shorty+"\t\t*");
         System.out.println("*32 bit - inty = "+inty+"\t\t*");
