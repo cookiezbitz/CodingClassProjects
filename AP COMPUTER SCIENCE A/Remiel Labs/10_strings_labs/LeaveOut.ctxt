@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=LeaveOut
+comment1.params=a\ i
+comment1.target=java.lang.String\ out(java.lang.String,\ int)
+numComments=2

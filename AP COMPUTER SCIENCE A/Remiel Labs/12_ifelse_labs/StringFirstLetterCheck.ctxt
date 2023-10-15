@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=StringFirstLetterCheck
+comment1.params=wordOne\ wordTwo
+comment1.target=boolean\ checkFirstLetter(java.lang.String,\ java.lang.String)
+numComments=2

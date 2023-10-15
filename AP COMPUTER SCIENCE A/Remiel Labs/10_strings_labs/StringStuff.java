@@ -4,6 +4,8 @@
 
 public class StringStuff
 {
-    public static String 
+    public static String firstlast(){
+        
+    }
 
 }

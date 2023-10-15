@@ -8,6 +8,6 @@ public class LeaveOut
     //post : string returned minus character at i
    public static String out( String a, int i)
     {
-        return "";
+        return a.substring(0,i) + a.substring(i+1);
     }
 }

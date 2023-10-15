@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=AB
+comment1.params=s\ a\ b
+comment1.target=boolean\ check(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=2
