@@ -4,7 +4,7 @@
 
 public class Decoder
 {
-    public String deCode( char s )
+    public static String deCode( char s )
     {
         char newchar = 23;
         String result;

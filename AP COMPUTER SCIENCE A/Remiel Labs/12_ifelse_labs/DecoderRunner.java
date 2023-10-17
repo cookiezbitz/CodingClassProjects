@@ -6,6 +6,6 @@ public class DecoderRunner
 {
     public static void main( String args[] )
     {
-        System.out.println(Decoder.deCode());
+        System.out.println(Decoder.deCode('c'));
     }
 }
