@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GuessingGame
+comment1.params=stop
+comment1.target=GuessingGame(int)
+comment2.params=
+comment2.target=void\ playGame()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
