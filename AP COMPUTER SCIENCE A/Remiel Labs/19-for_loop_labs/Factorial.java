@@ -4,9 +4,12 @@
 
 public class Factorial
 {
-	public static long getFactorial( int num )
-	{
-		long factorial=1;
-		return factorial;
-	}
+    public static long getFactorial( int num )
+    {
+        long factorial=1;
+        for( int x = 0; x < num ; x++){
+            factorial *= (num-x);
+        }
+        return factorial;
+    }
 }
