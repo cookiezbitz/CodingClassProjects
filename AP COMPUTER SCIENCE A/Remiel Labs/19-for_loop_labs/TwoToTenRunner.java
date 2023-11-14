@@ -7,7 +7,7 @@ public class TwoToTenRunner
     public static void main ( String[] args )
     {
         TwoToTen b = new TwoToTen();
-        String nums = "1010";
+        String nums = "1010101010110";
         System.out.println(nums + " == " + b.getBaseTen(nums));
     }
 }

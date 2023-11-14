@@ -4,12 +4,12 @@
 
 public class TwoToTen
 {
-    public static long getBaseTen( String bin )
+    public static double getBaseTen( String bin )
     {
-        long ten=0;
+        double ten=0;
         for(int x = bin.length(); x > 0; x--){
-            if(bin.substring(x).equals ("0")){
-                ten += Math.pow(2,(bin.length()-x));
+            if(bin.substring(x-1,x).equals ("1")){
+                ten += Math.pow(2,x);
             }
         }
         return ten;
