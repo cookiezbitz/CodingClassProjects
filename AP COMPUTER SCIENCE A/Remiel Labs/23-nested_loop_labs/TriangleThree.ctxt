@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=TriangleThree
+comment1.params=size\ let
+comment1.target=java.lang.String\ go(int,\ java.lang.String)
+numComments=2

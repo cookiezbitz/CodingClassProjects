@@ -5,7 +5,12 @@
 public class DigitCounter
 {
    public static int go( int number )
-	{
-		return 0;
-	}
+    {
+        String num = Integer.toString(number);
+        int numby = 0;
+        for(int x = 0; x<num.length(); x++){
+            numby++;
+        }
+        return numby;
+    }
 }
