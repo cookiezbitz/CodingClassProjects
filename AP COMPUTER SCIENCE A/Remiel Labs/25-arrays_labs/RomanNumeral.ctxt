@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=RomanNumeral
+comment1.params=str
+comment1.target=RomanNumeral(java.lang.String)
+comment2.params=orig
+comment2.target=RomanNumeral(java.lang.Integer)
+comment3.params=num
+comment3.target=void\ setNumber(java.lang.Integer)
+comment4.params=rom
+comment4.target=void\ setRoman(java.lang.String)
+comment5.params=
+comment5.target=java.lang.Integer\ getNumber()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

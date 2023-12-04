@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Histogram
+comment1.params=line\ size
+comment1.target=Histogram(java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getMax()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

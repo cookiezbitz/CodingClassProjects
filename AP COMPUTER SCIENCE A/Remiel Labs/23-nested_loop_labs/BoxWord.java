@@ -1,39 +1,27 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
+public class BoxWord {
+    public static String go(String word) {
+        String output = "";
+        int len = word.length();
+        String revword = "";
 
-public class BoxWord
-{
-    public static String go( String word )
-    {
-        String output="";
-        for(int x = 0; x<word.length(); x++){
-            for(int y=0; y<  word.length(); y++){
-            if(x%word.length() == 0){
+        for (int i = len - 1; i >= 0; i--) {
+            revword += word.charAt(i);
+        }
+
+        for (int x = 0; x < len; x++) {
+            if (x == 0) {
                 output += word;
-                break;
-            }else if(y%word.length()==0){
-                output += word.substring(x,x+1);
-            }else {
-                output += " ";
+            } else if (x == len - 1) {
+                output += revword;
+            } else {
+                output += word.charAt(x);
+                for (int spaces = 0; spaces < len - 2; spaces++) {
+                    output += " ";
+                }
+                output += word.charAt(len - x - 1);
             }
-                /*
-                output += word.substring(x,x+1);
-             if(x%word.length() == 0){
-                 output += word.substring(1,word.length()-1);
-                 //System.out.println("w");
-             }else{
-                 for(int e = 0; e<word.length()-2; e++)
-                 output+= " ";
-                 //System.out.println("2");
-             }
-             output += word.substring(word.length()-1,word.length());
-            */
+            output += "\n";
         }
-        output += "\n";
-            
-        }
-        return output+"\n";
+        return output;
     }
-    
 }
