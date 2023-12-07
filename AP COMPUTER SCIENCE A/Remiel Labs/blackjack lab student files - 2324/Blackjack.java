@@ -62,6 +62,8 @@ public class Blackjack
         cardposd++;
         player[cardposp] = deck.dealCard();
         cardposp++;
+        player[cardposp] = deck.dealCard();
+        cardposp++; 
         //deals a card to the dealer and player, incraments the index accordingly
 
         System.out.println("Welcome to Blackjack! (this is only for fun, no betting!!)");
@@ -69,8 +71,8 @@ public class Blackjack
         //wlcomes the player to the blackjack game
         do{
 
-            System.out.println("Dealer:  " + printHand(dealer) + " " + "("+getHandValue(dealer)+")");
-            System.out.println("Player:  " + printHand(player) + " " + "("+getHandValue(player)+")");
+            System.out.println("Dealer:  " + printHand(dealer) );
+            System.out.println("Player:  [" + printHand(player) + "" + "] : "+getHandValue(player)+"");
             //prints the dealer and player's hand
 
             if(getHandValue(dealer) == 11 && cardposd == 1){
@@ -132,7 +134,10 @@ public class Blackjack
                         //checks if hit
                         player[cardposp] = deck.dealCard();
                         //deals player caard
+                        
+                        System.out.println();
                         System.out.println("*** " + player[cardposp] + " ***");
+                        System.out.println();
 
                         cardposp++;
                         //increases card index
@@ -153,7 +158,7 @@ public class Blackjack
                         }
                     } else if(response.equals("S") || response.equals("s")){
                         //this situation runs if the player chooses to stand
-                        while(getHandValue(dealer) <= getHandValue(player) && getHandValue(dealer) !=21){
+                        while(getHandValue(dealer) < 17 && getHandValue(dealer) !=21){
                             //the dealer increases in cards until it's hand is more than the player's
                             dealer[cardposd] = deck.dealCard();
 
@@ -168,14 +173,14 @@ public class Blackjack
                             System.out.println("### Push! Round is tied ###");
                             over = true;
 
-                        }else if(getHandValue(dealer) <=21){
+                        }else if(getHandValue(dealer) > getHandValue(player)){
                             //dealer wins
                             System.out.println(" ### Dealer Wins! ###");
                             points--;
                             over = true;
                         }else{
                             //player wins
-                            System.out.println("### Dealer busted! Player wins! ###");
+                            System.out.println("$$$ Player wins! $$$");
                             points++;
                             over = true;
                             //remove one point;
@@ -257,8 +262,12 @@ public class Blackjack
         for( Card c : cards){
             if(c != null){
                 out += c.toString() + ", ";
+                //gets and prints all cards in the hand
             }
         }
+        
+        out = out.substring(0,out.length()-2);
+        //gets rid of the comma at the end
 
         return out;
     }
