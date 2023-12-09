@@ -14,7 +14,13 @@ public class ArrayStats
     
     public ArrayStats(String list)
     {
-        int[] array = {list};
+        Scanner c = new Scanner(list);
+        int x = 0;
+        while(c.hasNextInt()){
+            x++;
+            //array[x]  = c.nextInt();
+        }
+        System.out.println(" x is "  + x);
     }    
     
     public void setArray(String list)

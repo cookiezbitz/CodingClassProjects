@@ -75,7 +75,7 @@ public class Blackjack
             System.out.println("Player:  [" + printHand(player) + "" + "] : "+getHandValue(player)+"");
             //prints the dealer and player's hand
 
-            if(getHandValue(dealer) == 11 && cardposd == 1){
+            if(getHandValue(dealer) == 11 && cardposd == 1 && cardposp == 2){
                 //checks if the dealer's first card is an ace
                 //if so, prompts insurance
 
@@ -173,7 +173,7 @@ public class Blackjack
                             System.out.println("### Push! Round is tied ###");
                             over = true;
 
-                        }else if(getHandValue(dealer) > getHandValue(player)){
+                        }else if(getHandValue(dealer) > getHandValue(player) && getHandValue(dealer)<22){
                             //dealer wins
                             System.out.println(" ### Dealer Wins! ###");
                             points--;
