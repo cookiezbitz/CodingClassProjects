@@ -134,7 +134,7 @@ public class Blackjack
                         //checks if hit
                         player[cardposp] = deck.dealCard();
                         //deals player caard
-                        
+
                         System.out.println();
                         System.out.println("*** " + player[cardposp] + " ***");
                         System.out.println();
@@ -251,6 +251,8 @@ public class Blackjack
         cardposd++;
         player[cardposp] = deck.dealCard();
         cardposp++;
+        player[cardposp] = deck.dealCard();
+        cardposp++;
         //prepares game for next match.
     }
 
@@ -265,7 +267,7 @@ public class Blackjack
                 //gets and prints all cards in the hand
             }
         }
-        
+
         out = out.substring(0,out.length()-2);
         //gets rid of the comma at the end
 
@@ -292,21 +294,28 @@ public class Blackjack
     public int getHandValue(Card[] cards)
     {
         int sum = 0;
+        boolean hasAce = false;
         for( Card c : cards){
             if(c != null){
                 if(c.getFace() ==1 && sum < 10 || sum == 10){
                     sum+= c.getValue();
+                    hasAce = true;
                 } else if(c.getFace() != 1){
                     sum+= c.getValue();
                 }
                 else{
                     sum++;
                 }
+                if(hasAce == true && sum>21){
+                    sum-=10;
+                }
+                
+                
 
             }
         }
         //gets the sum of all card valuees in a given hand
-
+        hasAce = false;
         return sum;
     }
 
