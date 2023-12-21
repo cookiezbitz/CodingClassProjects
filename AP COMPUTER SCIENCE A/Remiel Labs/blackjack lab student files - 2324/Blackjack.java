@@ -294,6 +294,7 @@ public class Blackjack
     public int getHandValue(Card[] cards)
     {
         int sum = 0;
+        
         boolean hasAce = false;
         for( Card c : cards){
             if(c != null){
@@ -306,9 +307,12 @@ public class Blackjack
                 else{
                     sum++;
                 }
+                /*
                 if(hasAce == true && sum>21){
                     sum-=10;
+                    hasAce = false;
                 }
+                */
                 
                 
 

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Fibonacci
+comment1.params=s
+comment1.target=Fibonacci(int)
+comment2.params=set
+comment2.target=void\ FibSetter(int)
+comment3.params=
+comment3.target=int\ getFib()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
