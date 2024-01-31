@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Paddle
+comment1.params=
+comment1.target=Paddle()
+comment2.params=e\ b
+comment2.target=Paddle(int,\ int)
+comment3.params=e\ b\ f
+comment3.target=Paddle(int,\ int,\ int)
+comment4.params=e\ b\ c\ d\ f
+comment4.target=Paddle(int,\ int,\ int,\ int,\ int)
+comment5.params=e\ b\ c\ d\ cc\ f
+comment5.target=Paddle(int,\ int,\ int,\ int,\ java.awt.Color,\ int)
+comment6.params=window
+comment6.target=void\ moveUpAndDraw(java.awt.Graphics)
+comment7.params=window
+comment7.target=void\ moveDownAndDraw(java.awt.Graphics)
+comment8.params=
+comment8.target=int\ getSpeed()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10

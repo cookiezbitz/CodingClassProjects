@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=BlockTestTwo
+comment1.params=
+comment1.target=BlockTestTwo()
+comment2.params=window
+comment2.target=void\ paint(java.awt.Graphics)
+numComments=3

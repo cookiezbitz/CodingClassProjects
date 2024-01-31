@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=BallTestTwo
+comment1.params=
+comment1.target=BallTestTwo()
+comment2.params=window
+comment2.target=void\ update(java.awt.Graphics)
+comment3.params=window
+comment3.target=void\ paint(java.awt.Graphics)
+comment4.params=
+comment4.target=void\ run()
+numComments=5
