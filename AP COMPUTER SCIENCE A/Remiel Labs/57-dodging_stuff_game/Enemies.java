@@ -12,6 +12,10 @@ public class Enemies
 	private ArrayList<Enemy> enemies;
 	private Person guy;
 	
+	private int randomy;
+	private int randoms ;
+	private int numEnemies = 6;
+	
 	public Enemies(Person p)
 	{
 		enemies = new ArrayList<Enemy>();
@@ -20,14 +24,42 @@ public class Enemies
 	
 	// DRAW AND COLLISION METHOD
 	public void drawAndCollision(Graphics2D g) throws IOException
-	{
-		// ADD ENEMIES
+	{	
+		randomy = 150 + (int)(Math.random() * 350);
+		randoms = 3 + (int)(Math.random()*7.0);
+		
+		
+		if(enemies.size() < numEnemies){
+			addEnemy();
+		}
+		
+		
 		
 		// REMOVE ENEMIES THAT GO OUT OF BOUND
+		for(int x = 0; x < enemies.size(); x++){
+			if(enemies.get(x).getX() > Game.WIDTH){
+				enemies.remove(x);
+				x--;
+			}
+			
+		}
 		
 		// GO THROUGH THE LIST OF ENEMIES AND CALL THEIR draw() and move() method and check if their collide with guy if so then call the GAMEOVER() METHOD
-		
-		// IF THE PLAYER REACHES THE GRASS ON THE BOTTOM SIDE CALL THE VICTORY() method		
+		for(Enemy enem : enemies){
+			enem.draw(g);
+			enem.move();
+
+			if(guy.collide(enem.getX(),enem.getY())){
+				GAMEOVER(g);
+			}
+
+		}
+		// IF THE PLAYER REACHES THE GRASS ON THE BOTTOM SIDE CALL THE VICTORY() method
+				if(guy.getY() > 700){
+					VICTORY(g);
+				}
+				
+				
 	}
 	
 	public void GAMEOVER(Graphics2D g)
@@ -47,14 +79,18 @@ public class Enemies
 	}
 	
 	// ADDS AN ENEMY TO THE ENEMY LIST
+	
 	public void addEnemy() throws IOException
 	{
+		enemies.add(new Enemy(50, randomy, randoms));
+		//numEnemies++;
 		
 	}
+	
 	
 	// RETURN HOW MANY ENEMIES THERE ARE
 	public int numEnemies()
 	{
-		return 0;
+		return numEnemies;
 	}
 }
