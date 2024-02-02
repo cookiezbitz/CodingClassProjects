@@ -15,7 +15,8 @@ import javax.imageio.ImageIO;
 public class Person 
 {
 	private ArrayList<Image> list;	
-	private int x, y, current;
+	private int x, y, current,speed;
+	
 	private Image front = ImageIO.read(new File("dude.gif"));
 	private Image right = ImageIO.read(new File("dudeR.gif"));
 	private Image up = ImageIO.read(new File("dudeU.gif"));
@@ -25,6 +26,7 @@ public class Person
 	{
 		this.x=x;
 		this.y=y;
+		speed = 5;
 
 
 		list = new ArrayList<Image>();
@@ -72,26 +74,26 @@ public class Person
 	
 	public void moveRight()
 	{
-		x++;
+		x += speed;
 		current = 1;
 		// update current (direction) and move right		
 	}
 	
 	public void moveLeft()
 	{
-		x--;
+		x-= speed;
 		current = 3;
 	}
 	
 	public void moveUp()
 	{
-		y--;
+		y-=speed;
 		current = 2;
 	}
 	
 	public void moveDown()
 	{
 		current = 0;
-		y++;
+		y+=speed;
 	}
 }

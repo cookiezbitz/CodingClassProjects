@@ -14,7 +14,7 @@ public class Enemies
 	
 	private int randomy;
 	private int randoms ;
-	private int numEnemies = 6;
+	private int numEnemies = 30;
 	
 	public Enemies(Person p)
 	{
