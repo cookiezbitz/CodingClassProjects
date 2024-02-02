@@ -16,7 +16,7 @@ public class Enemies
 	{
 		enemies = new ArrayList<Enemy>();
 		guy = p;		
-	}
+	}	
 	
 	// DRAW AND COLLISION METHOD
 	public void drawAndCollision(Graphics2D g) throws IOException
