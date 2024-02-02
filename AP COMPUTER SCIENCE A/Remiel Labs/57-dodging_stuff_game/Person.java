@@ -16,11 +16,22 @@ public class Person
 {
 	private ArrayList<Image> list;	
 	private int x, y, current;
-	
+	private Image front = ImageIO.read(new File("dude.gif"));
+	private Image right = ImageIO.read(new File("dudeR.gif"));
+	private Image up = ImageIO.read(new File("dudeU.gif"));
+	private Image left = ImageIO.read(new File("dudeL.gif"));
+
 	public Person(int x, int y) throws IOException
 	{
 		this.x=x;
 		this.y=y;
+
+
+		list = new ArrayList<Image>();
+		list.add(front);
+		list.add(right);
+		list.add(up);
+		list.add(left);
 		
 		//point the array list at a new ArrayList
 		
@@ -43,36 +54,44 @@ public class Person
 	
 	public Image getCurrent()
 	{
+		
 		//return the current image (which matches the direction they are facing)
-		return null;
+		return list.get(current);
 	}
 	
 	public int getX()
 	{
+		
 		return x;
 	}
 	public int getY()
 	{
+		
 		return y;
 	}
 	
 	public void moveRight()
 	{
+		x++;
+		current = 1;
 		// update current (direction) and move right		
 	}
 	
 	public void moveLeft()
 	{
-		
+		x--;
+		current = 3;
 	}
 	
 	public void moveUp()
 	{
-		
+		y--;
+		current = 2;
 	}
 	
 	public void moveDown()
 	{
-			
+		current = 0;
+		y++;
 	}
 }
